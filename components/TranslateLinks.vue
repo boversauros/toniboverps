@@ -30,21 +30,27 @@ export default {
 }
 </script>
 
-<style>
- .lang-link:after {
-     content: '';
-     display: block;
-     width: 0;
-     height: 2px;
-     background: #35495e;
+<style lang="scss">
+.lang-link {
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #35495e;
   }
 
-  .lang-link:hover:after {
-    width: 100%;
-    transition: width .3s;
-  }
-
-  .lang-link--active:after {
+  &:hover {
+    &:after {
       width: 100%;
+      transition: width .3s;
+    }
   }
+
+  &--active {
+    &:after {
+      width: 100%;
+    }
+  }
+}
 </style>
